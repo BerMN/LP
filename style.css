@@ -4,3 +4,21 @@
  margin-left: 7rem;
  margin-right: 2rem;
 }
+#Glassmorphism{
+    background: linear-gradient(135deg, #000000, #0f0c29, #302b63, #7a45ff);
+}
+#voiceItem{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
