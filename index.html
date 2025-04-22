@@ -48,7 +48,7 @@
       <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
         こんな悩みはありませんか？
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
         <div class="text-center">
                 <i class="fas fa-exclamation-circle  text-4xl md:text-5xl text-purple-500 mb-4"></i>
                 <h3 class="text-xl font-bold mb-2">トレーニング方法がわからない</h3>
@@ -350,5 +350,79 @@
     </div>
    </div>
   </footer>
+   <!-- 🔻 Quảng cáo sticky -->
+   <div id="side-banner-ad">
+      <button id="close-side-ad" onclick="closeSideAd()">✖</button>
+      <a href="https://px.a8.net/svt/ejp?a8mat=453640+47TK1E+3T76+60H7L" rel="nofollow">
+        <img border="0" width="160" height="600" alt="" src="https://www23.a8.net/svt/bgt?aid=250410672255&wid=001&eno=01&mid=s00000017781001010000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=453640+47TK1E+3T76+60H7L" alt="">
+    </div>
+    
+    <style>
+      #side-banner-ad {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 160px;
+        height: 600px;
+        background: white;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+        z-index: 9999;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s ease;
+      }
+    
+      #side-banner-ad.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    
+      #side-banner-ad img {
+        display: block;
+      }
+    
+      #close-side-ad {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 22px;
+        text-align: center;
+      }
+    
+      #close-side-ad:hover {
+        background: rgba(0,0,0,0.8);
+      }
+    </style>
+    
+    <script>
+      function closeSideAd() {
+        document.getElementById("side-banner-ad").style.display = "none";
+        window.removeEventListener('scroll', checkScrollForAd);
+      }
+    
+      function checkScrollForAd() {
+        if (window.scrollY >=  window.innerHeight/3) {
+          document.getElementById("side-banner-ad").classList.add("show");
+          window.removeEventListener('scroll', checkScrollForAd); // chỉ hiển thị 1 lần
+        }
+      }
+    
+      window.addEventListener('scroll', checkScrollForAd);
+    </script>
+    
  </body>
 </html>
